@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 // url: /greenwich
 // page: fgw.hbs
 router.get('/greenwich', (req, res) => {
-  res.render('fgw');
+  res.render('greenwich');
 });
 
 router.get('/hanoi', (req, res) => {
