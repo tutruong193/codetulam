@@ -22,6 +22,7 @@ router.post('/output', function(req, res){
   // res.send(req.body);
   //render ra trong output kem du lieu tu form
   res.render('output',{sinhvien : student});
+  //c2res.render('output',{name: ten, email : email, age : tuoi, bod: ngaysinh});
 });
 
 module.exports = router;
