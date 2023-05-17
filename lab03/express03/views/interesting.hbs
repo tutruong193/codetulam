@@ -1,0 +1,41 @@
+<table class="bs5-table">
+
+</table>
+
+<div class="table-responsive">
+    <table class="table table-striped
+    table-hover	
+    table-borderless
+    table-primary
+    align-middle">
+        <thead class="table-light">
+            <caption>Table Name</caption>
+            <tr>
+                <th>Interest</th>
+            </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {{#each interesting}}
+                <tr class="table-primary" >
+                <td scope="row">{{this}}</td>
+                </tr>
+                {{/each}}
+                
+            </tbody>
+            <tfoot>
+                
+            </tfoot>
+    </table>
+</div>
+
+{{#each interesting}}
+    <h1>{{ this }}</h1>
+{{/each}}
+
+{{#if condition}}
+    
+{{/if}}
+
+{{#each list }}
+    
+{{/each}}

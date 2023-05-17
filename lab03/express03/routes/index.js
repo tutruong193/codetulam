@@ -12,5 +12,9 @@ router.get('/football',(req, res) => {
   res.render('football', {mu : manu, cs : chel, ars : ars, liver : liver});
 });
 
+router.get('/interesting',(req, res) => {
+  var hobby = ["sex", "girls", "movies", "football", "games"];
+  res.render('interesting', {interesting : hobby});
+});
 
 module.exports = router;
