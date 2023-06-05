@@ -6,6 +6,8 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var hbs = require('hbs');
+
 
 //khai bao mongoose
 var mongoose = require('mongoose');
@@ -32,7 +34,7 @@ mongoose.connect(local)
 .then(() => {console.log("Connect db successed!")})
 .catch((err) => {console.error(err)})
 
-
+hbs.registerHelper('dateFormat', require('handlebars-dateformat')); 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -61,5 +63,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+app.listen(5000);
 module.exports = app;
